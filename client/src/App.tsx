@@ -31,6 +31,10 @@ function App() {
     if(res.ok){
       const data = await res.json();
       alert(data.message);
+      fetch('http://localhost:3000/get')
+      .then(res => res.json())
+      .then(data => setTopics(data.topics))
+      .catch(err => console.log(err));
 
     }else {
       alert('Failed to save post');
