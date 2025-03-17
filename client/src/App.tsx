@@ -28,6 +28,7 @@ function App() {
       },
       body: JSON.stringify({topicName, postName, text, wikipediaArticle, timestamp})
     });
+    
     if(res.ok){
       const data = await res.json();
       alert(data.message);
