@@ -73,7 +73,9 @@ function App() {
               <div key={post._id} className="post">
                 <h3>{post.name}</h3>
                 <p className='postContent'>{post.text}</p>
+                <p className='postContent'>{post.wikipediaArticle}</p>
                 <p>{new Date(post.timestamp).toLocaleString()}</p>
+
               </div>
             ))}
           </div>
